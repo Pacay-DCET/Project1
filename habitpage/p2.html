@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>1%</title>
+    <link rel="icon" type="image/jpg" href="images/habit.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <button id="logout-btn">Log Out</button>
+    </div>
+
+    <div id="month-nav">
+        <button id="prev-month">&lt;</button>
+        <h2 id="month-year-header"></h2>
+        <button id="next-month">&gt;</button>
+    </div>
+
+    <div class="grid-container">
+        <div id="habit-grid"></div>
+    </div>
+
+    <button class="add-habit" id="open-modal">+ New Habit</button>
+
+    <div class="header-bar">
+        <h2>Notes</h2>
+        <button class="btn-add-note" id="btnShowModal">+ Add Note</button>
+    </div>
+
+    <div id="noteContainer">
+        <div id="noteList"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="habit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h3>Add New Habit</h3>
+            <input type="text" id="habit-name" placeholder="Habit name" />
+            <input type="number" id="habit-goal" placeholder="Goal (days)" min="1" />
+            <button id="add-habit">Add Habit</button>
+        </div>
+    </div>
+
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <button class="btn-close-modal" id="btnCloseModal">&times;</button>
+            <textarea id="userNoteInput" placeholder="Enter your note here"></textarea>
+            <button class="btn-add-note" id="btnSaveNote">Save Note</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

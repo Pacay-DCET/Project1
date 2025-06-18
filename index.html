@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/habit.jpg">
+    <link rel="stylesheet" href="design.css">
+    <title>1%</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/habit.jpg" alt="DailyHabits Logo" class="logo">
+            <span class="brand-name">DailyHabits</span>
+        </div>
+        <div class="header-buttons">
+            <button id="openCreateAccount" class="header-btn">Create Account</button>
+            <button id="openModal" class="header-btn">Login</button>
+        </div>
+    </header>
+
+    <center>
+        <div class="heading">
+            <h1>DailyHabits</h1>
+        </div>
+        <div class="container">
+            <h2>Welcome to DailyHabits</h2>
+            <p>Habits are the compound interest of self-improvement!</p>
+            <button id="b">Start your dailyhabits</button>
+        </div>
+    </center>
+
+    <!-- Login Modal -->
+    <div id="inventoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalspn">&times;</span>
+            <h3 id="modal-title">User Login</h3>
+            <form id="inventoryForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="closeModalbtn" class="btncancel">Cancel</button>
+                    <button type="submit" class="btnsave">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Account Modal -->
+    <div id="createAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeCreateAccountModal">&times;</span>
+            <h3 id="modal-title">Create Account</h3>
+            <form id="createAccountForm">
+                <div class="form-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" id="newUsername" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="closeCreateAccountbtn" class="btncancel">Cancel</button>
+                    <button type="submit" class="btnsave">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="lvl.js"></script>
+</body>
+
+</html>
