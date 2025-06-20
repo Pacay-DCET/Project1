@@ -17,6 +17,11 @@ let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 let habits = [];
 
+
+function setGridColumns(totalDays){
+    grid.style.setProperty('--total-days', totalDays);
+}
+
 function getHabitKey(year, month) {
     return `habits_${currentUser}_${year}_${month}`;
 }
@@ -40,7 +45,7 @@ function renderCalendar() {
     document.getElementById('month-year-header').textContent = `${monthNames[currentMonth]} ${currentYear}`;
 
     grid.innerHTML = '';
-    grid.style.gridTemplateColumns = `160px repeat(${totalDays}, 28px) 50px 60px`;
+    setGridColumns(totalDays);
 
     grid.innerHTML += `<div class="cell header"></div>`;
     for (let d = 1; d <= totalDays; d++) {
